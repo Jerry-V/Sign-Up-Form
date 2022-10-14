@@ -1,3 +1,139 @@
-div {
-    background-color: grey;
+* {
+    outline: none;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+:root {
+    --central-padding: 2em;
+}
+
+#main-container {
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    height: 100vh;
+}
+
+#main-left {
+    background-color: rgb(212, 189, 168);
+    background: url("halie-west-25xggax4bSA-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: scale(1,1);
+}
+
+#main-right {
+    background-color: rgb(219, 79, 61);
+    /*
+    7 CSS Techniques That I Use the MOST!
+    Center div
+    https://youtu.be/l_AUK0Z6D68?t=69
+    */
+    display: grid;
+    place-content: center;
+    grid-row-gap: 1em;
+}
+
+#form-header-container {
+    background-color: rgb(234, 245, 141);
+    padding-left: var(--central-padding);
+    max-width: 800px;
+}
+
+#form-input-container {
+    background-color: rgb(129, 212, 212);
+    padding-left: var(--central-padding);
+}
+
+form div + div, form div{
+    margin-top: 1em;
+}
+
+form:last-child {
+    margin-bottom: 1em;
+}
+
+p {
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+label {
+    letter-spacing: .1em;
+    font-size: .75em;
+    display: block;
+}
+
+input {
+    font: 1em sans-serif;
+    border: 1px solid #999;
+    border-radius: .25em;
+}
+
+form {
+    /* spaces the input fields in a grid pattern */
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    grid-row-gap: .5em;
+    grid-column-gap: 1.5em;
+}
+
+form p {
+    /* makes the p element span 2 rows */
+    grid-column: 1 / span 2;
+}
+
+form div {
+    /* keeps the div elements tight */
+    max-width: fit-content;
+}
+
+#ribbon {
+    background-color: rgba(39, 44, 44, 0.623);
+    position: relative;
+    top: 30%;
+    display: grid;
+    place-content: center;
+    grid-auto-flow: column;
+}
+
+#watermark-image {
+    background: url("odin-lined.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height:80px;
+    min-width: 60px;
+    align-self: center;
+}
+
+@font-face {
+    font-family: 'Norse-Bold';
+    src: url('Norse-Bold.otf');   
+}
+
+#watermark-text {
+    color: white;
+    font-family: 'Norse-Bold';
+    font-size: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Clicking on links removes the text, need to fix */
+#watermark-footer {
+    color: white;
+    position: fixed;
+    bottom: 0px;
+}
+
+#watermark-footer a {
+    color: white;
+}
+
+#form-footer-container {
+    background-color: rgb(224, 178, 157);
+    padding-left: var(--central-padding);
 }

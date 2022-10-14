@@ -7,28 +7,48 @@
 </head>
 <body>
 <div id="main-container">
-    <div style="height: 200px;" id="main-left">
-        <div id="ribbon">ribbon</div>
-        <footer>
-            <div>Photo by <a href="https://unsplash.com/@haliewestphoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Halie West</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></div>
-        </footer>
-        
+    <div id="main-left">
+        <div id="ribbon">
+            <div id="watermark-image"></div>
+            <div id="watermark-text">ODIN</div>
+        </div>
+        <div id="watermark-footer">Photo by <a href="https://unsplash.com/@haliewestphoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Halie West</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></div>
     </div>
-
     <div id="main-right">
-        <div id="top">
-            <p>This si not a real online service! You know you need something like this in your life to help you ealize your deepest dreams. Sign up now to get started.</p>
-            <p>You know you want to.</p>
+        <div id="form-header-container">
+            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <i>now</i> to get started.</p>
+            <p>You <i>know</i> you want to.</p>
         </div>
-        <div id="mid">
-            <label for=""></label><input type="text">
-            <label for=""></label><input type="text">
-            <label for=""></label><input type="text">
-            <label for=""></label><input type="text">
-            <label for=""></label><input type="text">
-            <label for=""></label><input type="text">
+        <div id="form-input-container">
+            <form action="#" method="post">
+                <p>Let's do this!</p>
+                <div>            
+                    <label for="name-first">FIRST NAME</label>
+                    <input id="name-first" name="name_first" type="text">
+                </div>
+                <div>            
+                    <label for="name-last">LAST NAME</label>
+                    <input id="name-last" name="name_last" type="text">
+                </div>
+                <div>            
+                    <label for="email">EMAIL</label>
+                    <input id="email" name="email" type="email">
+                </div>
+                <div>            
+                    <label for="phone-number">PHONE NUMBER</label>
+                    <input id="phone-number" name="phone_number" type="tel">
+                </div>
+                <div>            
+                    <label for="password1">PASSWORD</label>
+                    <input id="password1" name="password1" type="password">
+                </div>
+                <div>            
+                    <label for="password2">CONFIRM PASSWORD</label>
+                    <input id="password2" name="password2" type="password">
+                </div>
+            </form>
         </div>
-        <div id="low">
+        <div id="form-footer-container">
             <button>
                 Create Account
             </button>
