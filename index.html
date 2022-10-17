@@ -12,11 +12,16 @@
             <div id="watermark-image"></div>
             <div id="watermark-text">ODIN</div>
         </div>
-        <div id="watermark-footer">Photo by <a href="https://unsplash.com/@haliewestphoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Halie West</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></div>
+        <!--
+        https://www.freecodecamp.org/news/how-to-use-html-to-open-link-in-new-tab/
+        how to open links in new tabs without security issues
+        -->
+        <div id="watermark-footer">Photo by <a href="https://unsplash.com/@haliewestphoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Halie West</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Unsplash</a></div>
     </div>
     <div id="main-right">
         <div id="form-header-container">
-            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <i>now</i> to get started.</p>
+            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. <br/> Sign up <i>now</i> to get started.</p>
+            <br>
             <p>You <i>know</i> you want to.</p>
         </div>
         <div id="form-input-container">
@@ -40,11 +45,11 @@
                 </div>
                 <div>            
                     <label for="password1">PASSWORD</label>
-                    <input id="password1" name="password1" type="password">
+                    <input id="password1" name="password1" type="password" required>
                 </div>
                 <div>            
                     <label for="password2">CONFIRM PASSWORD</label>
-                    <input id="password2" name="password2" type="password">
+                    <input id="password2" name="password2" type="password" required>
                 </div>
             </form>
         </div>
@@ -52,7 +57,7 @@
             <button>
                 Create Account
             </button>
-            <div>Already have an account?<a href="">Log in</a></div>
+            <div>Already have an account? <a href="">Log in</a></div>
         </div>
     </div>
 </div>

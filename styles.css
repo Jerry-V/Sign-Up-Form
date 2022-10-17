@@ -8,87 +8,25 @@
 
 :root {
     --central-padding: 2em;
+    --button-alternate-color: #475a37;
 }
 
 #main-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 18px;
+    font-size: 24px;
     height: 100vh;
+    
 }
 
 #main-left {
-    background-color: rgb(212, 189, 168);
+/*     background-color: rgb(212, 189, 168); */
     background: url("halie-west-25xggax4bSA-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     transform: scale(1,1);
-}
-
-#main-right {
-    background-color: rgb(219, 79, 61);
-    /*
-    7 CSS Techniques That I Use the MOST!
-    Center div
-    https://youtu.be/l_AUK0Z6D68?t=69
-    */
-    display: grid;
-    place-content: center;
-    grid-row-gap: 1em;
-}
-
-#form-header-container {
-    background-color: rgb(234, 245, 141);
-    padding-left: var(--central-padding);
-    max-width: 800px;
-}
-
-#form-input-container {
-    background-color: rgb(129, 212, 212);
-    padding-left: var(--central-padding);
-}
-
-form div + div, form div{
-    margin-top: 1em;
-}
-
-form:last-child {
-    margin-bottom: 1em;
-}
-
-p {
-    font-weight: 600;
-    font-size: 1.5em;
-}
-
-label {
-    letter-spacing: .1em;
-    font-size: .75em;
-    display: block;
-}
-
-input {
-    font: 1em sans-serif;
-    border: 1px solid #999;
-    border-radius: .25em;
-}
-
-form {
-    /* spaces the input fields in a grid pattern */
-    display: inline-grid;
-    grid-template-columns: auto auto;
-    grid-row-gap: .5em;
-    grid-column-gap: 1.5em;
-}
-
-form p {
-    /* makes the p element span 2 rows */
-    grid-column: 1 / span 2;
-}
-
-form div {
-    /* keeps the div elements tight */
-    max-width: fit-content;
 }
 
 #ribbon {
@@ -126,14 +64,136 @@ form div {
 #watermark-footer {
     color: white;
     position: fixed;
-    bottom: 0px;
+    /*
+    https://www.w3schools.com/howto/howto_css_fixed_footer.asp
+    how to make a footer that is centered
+    */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: .8em;
+    font-weight: lighter;
 }
 
 #watermark-footer a {
     color: white;
 }
 
-#form-footer-container {
-    background-color: rgb(224, 178, 157);
+#main-right {
+/*     background-color: rgb(219, 79, 61); */
+    /* This allows the background to stretch the full width while
+    inner divs only take up a portion of the screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: whitesmoke;
+}
+
+#form-header-container {
+/*     background-color: rgb(234, 245, 141); */
     padding-left: var(--central-padding);
+    max-width: 900px;
+    padding-bottom: 3em;
+}
+
+#form-input-container {
+/*     background-color: rgb(129, 212, 212); */
+    padding-left: var(--central-padding);
+    background-color: white;
+    /* https://www.w3schools.com/CSSref/css3_pr_box-shadow.asp
+    box-shadow lets me make that nice lower edge to the input div */
+    box-shadow:  0px 2px 4px #ccc;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+form div + div, form div{
+    margin-top: 1em;
+}
+
+form:last-child {
+    margin-bottom: 1em;
+}
+
+p {
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+label {
+    letter-spacing: .1em;
+    font-size: .75em;
+    display: block;
+    font-weight: 500;
+}
+
+input {
+    font: inherit;
+    border: 2px solid #e5e7eb;
+    border-radius: .25em;
+}
+
+input:invalid {
+    border: 2px solid crimson;
+}
+
+form {
+    /* spaces the input fields in a grid pattern */
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    grid-row-gap: .5em;
+    grid-column-gap: 1.5em;
+}
+
+form p {
+    /* makes the p element span 2 rows */
+    grid-column: 1 / span 2;
+}
+
+form div {
+    /* keeps the div elements tight */
+    max-width: fit-content;
+}
+
+
+#form-footer-container {
+/*     background-color: rgb(224, 178, 157); */
+    padding-left: var(--central-padding);
+    font-size: .8em;
+    margin-top: 2em;
+    font-weight: 500;
+}
+
+button {
+    background-color: #596D48;
+    color: whitesmoke;
+    padding: 15px;
+    width: 250px;
+    border-radius: .5em;
+    margin-bottom: 2em;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/*
+https://www.w3schools.com/csS/css3_buttons.asp
+how to make custom animated buttons
+*/
+
+button:hover {
+    background-color: var(--button-alternate-color);
+    cursor: pointer;
+}
+
+button:active {
+    background-color: var(--button-alternate-color);
+    box-shadow: 0 5px 10px #999;
+    transform: translateY(2px);
+}
+
+#form-footer-container a {
+    color: #596D48;
+    text-decoration: none;
+    font-weight: bold;
 }
