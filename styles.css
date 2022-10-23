@@ -138,6 +138,24 @@ input:invalid {
     border: 2px solid crimson;
 }
 
+/*
+https://developer.mozilla.org/en-US/docs/Learn/Forms/UI_pseudo-classes#using_generated_content_with_pseudo-classes
+how I get the error message to appear below
+need better css/javascript skills to make both PW
+fields work (on/off) together and so on (add real functionality)
+*/
+
+.pw-no-match + span::after {
+    /*
+    display: block
+    is for keeping the span on a new line, especially in firefox
+    */
+    display: block;
+    content: "* Passwords do not match";
+    font-size: .75em;
+    color: crimson;
+}
+
 form {
     /* spaces the input fields in a grid pattern */
     display: inline-grid;
